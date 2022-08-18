@@ -1,6 +1,5 @@
 ## OpenCV Basics
 
-
 Welcome to OpenCV with Python Series for computer vision. We will explore OpenCV from basics to advanced, this article is created along my learning process about OpenCV.  The series will be different than from rest of my writing style (formal writing) and the  article update will try to improve the article gradually. Without any further intro, let me introduce OpenCV.
 
 
@@ -26,7 +25,7 @@ cv2.imshow('cat',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-In the followind code I will be using matplotlib.
+In the following code I will be using matplotlib.
 
 
 ```python
@@ -34,18 +33,8 @@ import matplotlib.pyplot as plt
 plt.imshow(img)
 ```
 
-
-
-
-    <matplotlib.image.AxesImage at 0x7fb2fe7cd8a0>
-
-
-
-
+![output_5_1.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1660800238106/H2hjHNsSC.png align="left")
     
-![png](output_5_1.png)
-    
-
 
 Let's view the shape of this numpy array(image)
 
@@ -66,13 +55,6 @@ OpenCV provides methods to save the numpy array (image) into any format we speci
 cv2.imwrite('cat.png',img)
 ```
 
-
-
-
-    True
-
-
-
 ## Understanding channels 
 
 Till now we just explored how to read and write image, and view them. Now we will be looking into what channels are.
@@ -88,7 +70,7 @@ Channels are nothing other than color. If we say Red channel then we mean Red co
 
 Interestingly, we can use combination of 3 colors to generate other colors.
 
-![rgb](./rgb.png)
+![rgb](https://cdn-images-1.medium.com/fit/c/192/192/1*akS8GJ6wSeVW3t_kEiRWvw.png)
 
 By using combinations of Red, Blue and Green we get variety of colors.
 
@@ -105,15 +87,6 @@ plt.imshow(grey_img)
 ```
 
 
-
-
-    <matplotlib.image.AxesImage at 0x7fb2fe246650>
-
-
-
-
-    
-![png](output_14_1.png)
     
 
 
@@ -126,18 +99,6 @@ plt.imshow(converted_grey)
 ```
 
 
-
-
-    <matplotlib.image.AxesImage at 0x7fb2fe3fe650>
-
-
-
-
-    
-![png](output_16_1.png)
-    
-
-
 To access the individual channel from the BGR image, we can proceed by:
 
 
@@ -147,17 +108,5 @@ concated = cv2.hconcat([b,g,r])
 plt.imshow(concated)
 ```
 
-
-
-
-    <matplotlib.image.AxesImage at 0x7fb2fe2b6c20>
-
-
-
-
     
-![png](output_18_1.png)
-    
-
-
 In the next article we will explore some augmentation methods available in OpenCV.
