@@ -76,15 +76,15 @@ class AbstractResource(ABC):
     def execute_task(self, task_name):
         pass
 
-class ConcreteResource(Resource):
+class ConcreteResource(AbstractResource):
     def execute_task(self, task_name):
         print(f"Executing task '{task_name}'...")
         # Simulate heavy computational task here
         return f"Result of '{task_name}' task"
 
-class ProxyResource(Resource):
+class ProxyResource:
     def __init__(self):
-        self._real_resource = RealResource()
+        self._real_resource = ConcreteResource()
         self._cache = {}
 
     def execute_task(self, task_name):
@@ -199,7 +199,7 @@ class GenericSearchAPI(API):
     def search(self,query):
         pass
 
-class GoogleAPI(API):
+class GoogleAPI(GenericSearchAPI):
     def __init__(self,access_key,*args,**kwargs):
         self._access_key = os.getenv('access_key')
         super().__init__(self,*args,**kwargs)
@@ -228,7 +228,7 @@ class GenericSearchAPI(API):
     def search(self,query):
         pass
 
-class GoogleAPI(API):
+class GoogleAPI(GenericSearchAPI):
     def __init__(self,*args,**kwargs):
         self._access_key = os.getenv('access_key')
         super().__init__(self,*args,**kwargs)
@@ -275,7 +275,7 @@ class GenericSearchAPI(API):
     def search(self,query):
         pass
 
-class GoogleAPI(API):
+class GoogleAPI(GenericSearchAPI):
     def __init__(self,*args,**kwargs):
         self._access_key = os.getenv('access_key')
         super().__init__(self,*args,**kwargs)
@@ -335,7 +335,7 @@ class GenericSearchAPI(API):
     def search(self,query):
         pass
 
-class GoogleAPI(API):
+class GoogleAPI(GenericSearchAPI):
     def __init__(self,*args,**kwargs):
         self._access_key = os.getenv('access_key')
         super().__init__(self,*args,**kwargs)
@@ -343,7 +343,7 @@ class GoogleAPI(API):
         res = requests.get(f"{self.url}/?search={query}&access_key={self._access_key}").json()
         return res
 
-class DuckDuckGOAPI(API):
+class DuckDuckGOAPI(GenericSearchAPI):
     def __init__(self,*args,**kwargs):
         self._app_name = os.getenv('app_name')
         self._public_key = os.getenv('public_key')
