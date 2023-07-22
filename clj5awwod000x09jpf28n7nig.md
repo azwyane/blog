@@ -3,6 +3,7 @@ title: "Garbage Collection in Python"
 datePublished: Wed Jun 21 2023 05:56:12 GMT+0000 (Coordinated Universal Time)
 cuid: clj5awwod000x09jpf28n7nig
 slug: garbage-collection-in-python
+cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/b25tsR8dBh0/upload/d381ccd00a793626e5b9c636db0007be.jpeg
 tags: python
 
 ---
