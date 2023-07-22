@@ -248,7 +248,7 @@ finance_lookup_engine = FinanceLookup()
 
 keyword = "finance"
 # Lookup keyword
-results = finance_lookup_engine.lookup()
+results = finance_lookup_engine.lookup(keyword)
 ```
 
 But Hold On.
@@ -308,7 +308,7 @@ finance_lookup_engine = FinanceLookup()
 
 keyword = "finance"
 # Lookup keyword
-results = finance_lookup_engine.lookup()
+results = finance_lookup_engine.lookup(keyword)
 ```
 
 In the above code, `GoogleAPIProxy` is a proxy to `GoogleAPI` which searches the cache before hitting the actual API, to prevent excessive API hits.
