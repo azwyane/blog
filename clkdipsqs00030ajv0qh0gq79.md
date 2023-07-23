@@ -204,7 +204,7 @@ class GenericSearchAPI(API):
         pass
 
 class GoogleAPI(GenericSearchAPI):
-    def __init__(self,access_key,*args,**kwargs):
+    def __init__(self,*args,**kwargs):
         self._access_key = os.getenv('access_key')
         super().__init__(self,*args,**kwargs)
     def search(self, query):
