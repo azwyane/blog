@@ -152,12 +152,12 @@ class SubtractCommand(Command):
         return self.x - self.y
 
 class Calculator:
-    def __init__(self,command)
+    def __init__(self):
         self.command = None
-    
+
     def set_command(self,command):
         self.command = command
-    
+
     def execute_command(self):
         return self.command.execute()
 
@@ -169,8 +169,12 @@ subtract_command = SubtractCommand(4, 2)
 calculator.set_command(add_command)
 result_add = calculator.execute_command()
 
+print(result_add)
+
 calculator.set_command(subtract_command)
 result_subtract = calculator.execute_command()
+
+print(result_subtract)
 ```
 
 A single `execute_command()` method is called over `Calculator` class, which takes a `Command` object as an argument. Due to this, the execution output of the calculator is different based on the command that is passed to the instance of `Calculator`. Thus, we are now able to parameterize clients with different requests.
