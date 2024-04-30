@@ -1,8 +1,8 @@
 ---
-title: "Design Patterns for Fun and Profit"
+title: "Design Patterns for Fun"
 datePublished: Sat Jul 22 2023 04:36:29 GMT+0000 (Coordinated Universal Time)
 cuid: clkdipsqs00030ajv0qh0gq79
-slug: design-patterns-for-fun-and-profit
+slug: design-patterns-for-fun
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/chcyjyRQV74/upload/3da0b8bfa3b139f93784f8e355cf7ff7.jpeg
 tags: design-patterns, software-development, python, software-engineering
 
